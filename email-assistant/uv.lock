@@ -160,6 +160,7 @@ version = "0.1.0"
 source = { virtual = "." }
 dependencies = [
     { name = "langchain" },
+    { name = "langchain-deepseek" },
     { name = "langgraph" },
     { name = "langmem" },
     { name = "python-dotenv" },
@@ -168,6 +169,7 @@ dependencies = [
 [package.metadata]
 requires-dist = [
     { name = "langchain", specifier = ">=0.3.21" },
+    { name = "langchain-deepseek", specifier = ">=0.1.2" },
     { name = "langgraph", specifier = ">=0.3.18" },
     { name = "langmem", specifier = ">=0.0.15" },
     { name = "python-dotenv", specifier = ">=1.0.1" },
@@ -356,6 +358,19 @@ dependencies = [
 sdist = { url = "https://files.pythonhosted.org/packages/43/83/1f43d13cb0bf0738e47dde401b898d1da75aac98a10ad4a242013fff03e2/langchain_core-0.3.46.tar.gz", hash = "sha256:5fca010eeb0a427be5aa8a8525e2112995dde790c584cef165be7c5e0ee1c2b5", size = 531880 }
 wheels = [
     { url = "https://files.pythonhosted.org/packages/00/8a/dbc9ad2e3511355ea3f13c70c8022018e0fed57d5422f94f86f23499c538/langchain_core-0.3.46-py3-none-any.whl", hash = "sha256:28b5689fc347975ea520b5364ab4aee5567e661553bbee5e97cabf4596c28ce0", size = 417068 },
+]
+
+[[package]]
+name = "langchain-deepseek"
+version = "0.1.2"
+source = { registry = "https://pypi.org/simple" }
+dependencies = [
+    { name = "langchain-core" },
+    { name = "langchain-openai" },
+]
+sdist = { url = "https://files.pythonhosted.org/packages/76/50/53c67820df28cd15b53eb4bd6b8e212bf74ea50448637bd9c057897884db/langchain_deepseek-0.1.2.tar.gz", hash = "sha256:0ccb482d1241ed16a5578dcb7606b847d923b7dd56737e7e5ba20be635d0ca34", size = 5437 }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/43/94/8a7b5629a784e40024ae9e352c656f63a8c94184f4477b60a6c2a42bac7d/langchain_deepseek-0.1.2-py3-none-any.whl", hash = "sha256:6ec76c621670afa763671eba8a54ff356b1772f3779fea4ea963cf01e5119145", size = 5627 },
 ]
 
 [[package]]

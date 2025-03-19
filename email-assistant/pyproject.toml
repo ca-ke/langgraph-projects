@@ -6,6 +6,7 @@ readme = "README.md"
 requires-python = ">=3.12"
 dependencies = [
     "langchain>=0.3.21",
+    "langchain-deepseek>=0.1.2",
     "langgraph>=0.3.18",
     "langmem>=0.0.15",
     "python-dotenv>=1.0.1",
