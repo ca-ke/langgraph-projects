@@ -1,0 +1,8 @@
+#!/bin/bash
+
+if [ -z "$1" ]; then
+  echo "Usage: research \"Your Topic Here\""
+  exit 1
+fi
+
+uv run main.py research "$1"

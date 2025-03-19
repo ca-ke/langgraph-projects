@@ -13,7 +13,7 @@ def cli():
 @click.argument("topic")
 def research(topic: str):
     load_dotenv()
-    print(build_graph(topic))
+    click.echo(build_graph(topic))
 
 
 cli.add_command(research)

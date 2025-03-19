@@ -1,0 +1,13 @@
+[project]
+name = "react"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "duckduckgo-search>=7.5.2",
+    "langchain-community>=0.3.19",
+    "langchain-core>=0.3.45",
+    "langchain-ollama>=0.2.3",
+    "langgraph>=0.3.11",
+]

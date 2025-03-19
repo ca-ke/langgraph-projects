@@ -99,13 +99,13 @@ def summarize_sources(
     return replace(state, running_summary=running_summary)
 
 
-def finalize_summary(state: SummaryState, config: RunnableConfig) -> SummaryState:
+def finalize_summary(state: SummaryState, config: RunnableConfig) -> SummaryStateOutput:
     all_sources = "\n".join(source for source in state.sources_gathered)
     state.running_summary = (
         f"## Summary:\n\n{state.running_summary}\n\n ### Sources: \n\n {all_sources}"
     )
 
-    return replace(state, running_summary=state.running_summary)
+    return SummaryStateOutput(running_summary=state.running_summary)
 
 
 def reflect(
@@ -134,7 +134,6 @@ def reflect(
         ]
     )
     follow_up_query = json.loads(result.content)
-    print(f"Reflect: {follow_up_query} \n\n {reflection_instruction}")
     query = follow_up_query.get("follow_up_query")
 
     if not query:
